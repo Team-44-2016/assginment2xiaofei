@@ -8,5 +8,16 @@ function viewLocation(locationName)
     // Save the desired location to local storage
     localStorage.setItem(APP_PREFIX + "-selectedLocation", locationName); 
     // And load the view location page.
+      outputLocationA
+    
+    outputLocationB
+    
+    //  outputAreaRef.innerHTM=(LocationA);
+    
+    
+    console.log(LocationA);
+    
     location.href = 'viewlocation.html';
+    
+  
 }

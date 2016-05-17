@@ -1,8 +1,20 @@
+   <!--   Programmed by: Xiaofei WANG   -->     
+
+
 <!doctype html>
 <html>
     <head>
+        <style>
+            #map{
+                width: 300px;
+                height: 300px;
+                background-color: #CCC;
+            }
+            
+        </style>
         <title>Weather</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.1.3/material.indigo-pink.min.css">
         <script src="https://storage.googleapis.com/code.getmdl.io/1.1.3/material.min.js"></script>
@@ -28,56 +40,79 @@
             <div class="content-grid mdl-grid">
               <div class="mdl-cell">
                 <!--   Main page content here:   -->  
+  
                   
-                 
-       <form id="form1">
+                  
+                  
+                  
+                  
+                  
+   <!--   Input Location A here:   -->                 
+       <form id="#">
             Location A
-<div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text"  name ="LocationA">
-    <label class="mdl-textfield__label" for="LocationA" >Input Loacation A...</label>
-  </div>
+           <br />
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class="mdl-textfield__input" id="addressA" onkeypress="initMap()" type="text" name="inputBox">
+<label class="mdl-textfield__label" for="address">Enter a town or address...</label>
+ </div>  
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+ <input class="mdl-textfield__input" type="text" name="inputBox" id = "nicknameA">      <label class="mdl-textfield__label" for="address">Enter a label for this location...</label>
+</div>
       
         </form>        
         <button onclick="outputLocationA()">Location A</button>
     <br> 
     <br> 
-       
                   
                   
-    <form id="form2">
+                  
+                  
+                  
+                  
+         <!--   Input Location B here:   -->                 
+                  
+                  
+                  
+  <form id="#1">
             Location B
-     <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" id="LocationB" name ="name">
-    <label class="mdl-textfield__label" for="LocationB" >Input Loacation B...</label>
+           <br />
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                 <input class="mdl-textfield__input" id="addressB" onkeypress="initMap()" type="text" name="inputBox">
+               <label class="mdl-textfield__label" for="address">Enter a town or address...</label>
+
+           </div>  
+                       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                 <input class="mdl-textfield__input" type="text" name="inputBox" id = "nicknameB">      <label class="mdl-textfield__label" for="address">Enter a label for this location...</label>
   </div>
       
         </form>        
         <button onclick="outputLocationB()">Location B</button>
                   
-    <input type="reset" name="reset" value="reset" onclick="reset">
+                           
+    <br /> 
+    <br /> 
+        
+        
+         <div id="map"></div>    
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3n7-4FRQGPt37ezGb66wNqA4Htwl5MNk&libraries=places&callback=initMap"
+                    async defer></script>
+                  <br><br><a href="index.html" onclick = "saveIt()">Add location</a>
+                              
+
+              </div>   
+                  
+                  
+                  
+                  
+                
+                  
+             
+  
     
-        <p id="demo"></p>
+         
                   
                   
-           <br>       
-                  
-             <p id="demo2"></p>      
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+                          
 
               </div>
             </div>
