@@ -1,0 +1,143 @@
+   <!--   Programmed by: Xiaofei WANG   -->     
+
+
+<!doctype html>
+<html>
+    <head>
+        <style>
+            #map{
+                width: 300px;
+                height: 300px;
+                background-color: #CCC;
+            }
+            
+        </style>
+        <title>Weather</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.1.3/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="css/weatherapp.css" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <link rel="shortcut icon" sizes="196x196" href="images/icon.png" />
+        <link rel="apple-touch-icon-precomposed" href="images/icon.png" />
+    </head>
+    
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <header class="mdl-layout__header">
+              <button onclick="location.href = 'index.html';" class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon"> 
+                <i class="material-icons">arrow_back</i>
+              </button>
+            <div class="mdl-layout__header-row">
+              <span class="mdl-layout-title" id="headerBarTitle">Add Location</span>
+            </div>
+          </header>
+          <main class="mdl-layout__content">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell">
+                <!--   Main page content here:   -->  
+  
+                  
+                  
+                  
+                  
+                  
+                  
+   <!--   Input Location A here:   -->                 
+       <form id="#">
+            Location A
+           <br />
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class="mdl-textfield__input" id="address" onkeypress="initMap()" type="text" name="inputBox">
+<label class="mdl-textfield__label" for="address">Enter a town or address...</label>
+ </div>  
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+ <input class="mdl-textfield__input" type="text" name="inputBox" id = "nickname">      <label class="mdl-textfield__label" for="address">Enter a label for this location...</label>
+</div>
+           
+           
+           
+           
+      <label for ="addressA"><input id="addressA" type="radio" name=location checked value="1" > locationA     </label>
+                  <label for ="addressB"><input id="addressB" type="radio" name=location value="1" >locationB     </label>
+           
+           
+           
+           
+           
+        </form>        
+        <button onclick="outputLocationA()">Location A</button>
+    <br> 
+    <br> 
+            
+         <!--   Input Location B here:   -->                 
+               
+  <form id="#1">
+            Location B
+           <br />
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                 <input class="mdl-textfield__input" id="addressB" onkeypress="initMap()" type="text" name="inputBox">
+               <label class="mdl-textfield__label" for="address">Enter a town or address...</label>
+
+           </div>  
+                       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                 <input class="mdl-textfield__input" type="text" name="inputBox" id = "nicknameB">      <label class="mdl-textfield__label" for="address">Enter a label for this location...</label>
+  </div>
+      
+        </form>        
+        <button onclick="outputLocationB()">Location B</button>
+                  
+                           
+    <br /> 
+                  <br /> 
+                  <br /> 
+                  
+         <button onclick="clearlocation()">Clearlocations</button>         
+                
+                  
+                  
+                  <select>
+                  <option>Please choose </option>
+                    <option>Location A</option>  
+                  <option> Location B</option>
+                
+                  </select>
+               
+                  <br /> 
+        
+        
+         <div id="map"></div>    
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3n7-4FRQGPt37ezGb66wNqA4Htwl5MNk&libraries=places&callback=initMap"
+                    async defer></script>
+                  <br><br><a href="index.html" onclick = "saveIt()">Add location</a>
+                              
+
+              </div>   
+                  
+                  
+                  
+                  
+                
+                  
+             
+  
+    
+         
+                  
+                  
+                          
+
+              </div>
+            </div>
+          </main>    
+        </div>
+
+        <!--   JavaScript files:   -->
+        <script src="js/locationWeatherCache.js"></script>
+        <script src="js/addlocationPage.js"></script>
+    </body>
+</html>

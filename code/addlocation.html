@@ -24,8 +24,18 @@
         <meta name="mobile-web-app-capable" content="yes" />
         <link rel="shortcut icon" sizes="196x196" href="images/icon.png" />
         <link rel="apple-touch-icon-precomposed" href="images/icon.png" />
+    
+    
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3n7-4FRQGPt37ezGb66wNqA4Htwl5MNk&libraries=places&callback=initMap"
+                    async defer></script>
+  <!--   JavaScript files:   -->
+        <script src="js/locationWeatherCache.js"></script>
+        <script src="js/addlocationPage.js"></script>   
+
+    
     </head>
     
+  
     <body>
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
           <header class="mdl-layout__header">
@@ -40,87 +50,50 @@
             <div class="content-grid mdl-grid">
               <div class="mdl-cell">
                 <!--   Main page content here:   -->  
-  
                   
-                  
-                  
-                  
-                  
-                  
-   <!--   Input Location A here:   -->                 
+   <!--   Input Locations here:   -->                 
        <form id="#">
-            Location A
+            Locations
            <br />
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-<input class="mdl-textfield__input" id="addressA" onkeypress="initMap()" type="text" name="inputBox">
-<label class="mdl-textfield__label" for="address">Enter a town or address...</label>
+    
+<input class="mdl-textfield__input" id="address" onkeypress="initMap()" type="text" name="inputBox">  
+<label class="mdl-textfield__label" for="address">Enter an address...</label>  
+    
  </div>  
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
- <input class="mdl-textfield__input" type="text" name="inputBox" id = "nicknameA">      <label class="mdl-textfield__label" for="address">Enter a label for this location...</label>
+    
+    
+    
+<input class="mdl-textfield__input" type="text" name="inputBox" id = "nickname"> 
+<label class="mdl-textfield__label" for="address">Enter a label for this location...</label>
 </div>
-      
-        </form>        
-        <button onclick="outputLocationA()">Location A</button>
-    <br> 
-    <br> 
+  
+        <br />          
+     
+<label ><input type="radio" name="locat" value="LocationA" checked >Location A     </label>
+        <br /> 
+<label><input type="radio" name="locat" value="LocationB" >Location B     </label>
+           
+        <br /> 
+        <br />        
+        <button  onclick="SaveLocation()">Save Locations  </button>
+   
+        <br /> 
+        <br /> 
                   
-                  
-                  
-                  
-                  
-                  
-         <!--   Input Location B here:   -->                 
-                  
-                  
-                  
-  <form id="#1">
-            Location B
-           <br />
-<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                 <input class="mdl-textfield__input" id="addressB" onkeypress="initMap()" type="text" name="inputBox">
-               <label class="mdl-textfield__label" for="address">Enter a town or address...</label>
-
-           </div>  
-                       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                 <input class="mdl-textfield__input" type="text" name="inputBox" id = "nicknameB">      <label class="mdl-textfield__label" for="address">Enter a label for this location...</label>
-  </div>
-      
-        </form>        
-        <button onclick="outputLocationB()">Location B</button>
-                  
-                           
-    <br /> 
-    <br /> 
+         <button type="reset"  onclick="ClearLocation()">Clear Locations</button>         
         
+        <br /> 
+        <br /> 
+        <br /> 
         
          <div id="map"></div>    
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3n7-4FRQGPt37ezGb66wNqA4Htwl5MNk&libraries=places&callback=initMap"
-                    async defer></script>
-                  <br><br><a href="index.html" onclick = "saveIt()">Add location</a>
-                              
-
-              </div>   
-                  
-                  
-                  
-                  
-                
-                  
-             
-  
-    
-         
-                  
-                  
-                          
-
-              </div>
+  </form>   
+            </div>
             </div>
           </main>    
         </div>
-
-        <!--   JavaScript files:   -->
-        <script src="js/locationWeatherCache.js"></script>
-        <script src="js/addlocationPage.js"></script>
+   
     </body>
 </html>

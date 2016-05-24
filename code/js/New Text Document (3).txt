@@ -5,6 +5,9 @@
 // Code for the Add Location page.
 
 
+
+
+
 function initMap(){
                           var mapDiv = document.getElementById('map');
                           var map = new google.maps.Map(mapDiv,{
@@ -40,15 +43,21 @@ function initAutocomplete() {
 }
 
 
+
+
 var lat=0;
 var long=0;
 
 
 function locationInformation(Name,Location,lat,long) {
     this.nickname=Name;
-    this.locations=Location;  
+    
+       this.locations=Location;
+    
     this.lat=lat;
-    this.long=long;  
+ 
+    this.long=long;
+   
 }
 
 //x is the number/index of the location stored
@@ -60,10 +69,13 @@ var x=0;
 //information stored in local storage therefore can access by other file
 function SaveLocation() {
     var nickname=document.getElementById("nickname").value;
+    
 
     
+    
     var locations=document.getElementsByName("locat");
-   
+    
+    
     for (var i = 0, length = locations.length; i < length; i++) {
     if (locations[i].checked) {
         // do whatever you want with the checked radio
@@ -74,7 +86,9 @@ function SaveLocation() {
     }
 }
     
-   
+    
+    
+    
     var location= new locationInformation(nickname,locations,lat,long);
     if (JSON.parse(localStorage.getItem("numberOflocation"))!==null) {
     x=JSON.parse(localStorage.getItem("numberOflocation"));
@@ -88,13 +102,16 @@ if (typeof(Storage) !== "undefined") {
 } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Local Storage...";
 }
-//  window.location="index.html";
- 
+   // window.location="index.html";
+    
+    
     console.log(location)
 }
 
+
+
 function ClearLocation(){
-  
+
     localStorage.clear();
 }
 
