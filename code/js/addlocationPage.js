@@ -88,7 +88,7 @@ if (typeof(Storage) !== "undefined") {
 } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Local Storage...";
 }
-//  window.location="index.html";
+  window.location="index.html";
  
     console.log(location)
 }
@@ -97,6 +97,38 @@ function ClearLocation(){
   
     localStorage.clear();
 }
+
+
+
+function geoFindMe() {
+  var output = document.getElementById("adress");
+
+  if (!navigator.geolocation){
+    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+    return;
+  }
+
+  function success(position) {
+     var lat = position.coords.latitude;
+    var long = position.coords.longitude;
+console.log(lat,long)
+    
+
+    var img = new Image();
+    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + long + "&zoom=13&size=300x300&sensor=false";
+
+    output.appendChild(img);
+  };
+
+  function error() {
+    output.innerHTML = "Unable to retrieve your location";
+  };
+
+  output.innerHTML = "<p>Locating…</p>";
+
+  navigator.geolocation.getCurrentPosition(success, error);
+}
+
 
 
 
